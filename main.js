@@ -40,3 +40,25 @@ switch (randomNumber) {
     break;
 }
   console.log(`The eightBall answered: ${eightBall}`);
+
+// Race Participation Log
+
+let raceNumber = Math.floor(Math.random() * 1000);
+
+let registeredEarly = false;
+
+let runnerAge = 18;
+
+if (registeredEarly === true && runnerAge > 18) {
+  raceNumber += 1000;
+} 
+
+if (runnerAge > 18 && registeredEarly === true) {
+  console.log(`You will race at 9:30am for registering early with the race number ${raceNumber}.`)
+} else if (registeredEarly === false && runnerAge > 18) {
+  console.log(`You will race at 11:00 for not registering early, your race number is ${raceNumber}.`)
+} else if (runnerAge < 18) {
+  console.log(`You will race at 12:30pm, your race number is ${raceNumber}.`)
+} else {
+  console.log('Please see the registration desk if you are 18 years old.')
+}
